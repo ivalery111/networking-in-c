@@ -6,9 +6,8 @@ target_sources(network
         network/stub.c
 )
 
-target_include_directories(network 
-    PUBLIC ${${PROJECT_NAME}_SOURCE_DIR}/include
-    PRIVATE ${${PROJECT_NAME}_SOURCE_DIR}/include/network
+target_include_directories(network
+    PUBLIC ${${PROJECT_NAME}_SOURCE_DIR}/include/network
     PRIVATE ${${PROJECT_NAME}_SOURCE_DIR}/src/internal
 )
 
