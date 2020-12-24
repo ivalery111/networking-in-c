@@ -7,6 +7,7 @@ target_sources(network
     network/_open_udp_socket.c
     network/_bind_socket.c
     network/_read_buffer_udp.c
+    network/_send_buffer_udp.c
 )
 
 target_include_directories(network
