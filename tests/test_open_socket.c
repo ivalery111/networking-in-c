@@ -8,5 +8,4 @@ int main(void) {
 
   int result = _net_close_socket(sock);
   assert(result == 0);
-  (void)result;
 }
