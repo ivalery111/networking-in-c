@@ -3,7 +3,8 @@ add_library(network::network ALIAS network)
 
 target_sources(network
     PRIVATE 
-        network/stub.c
+    network/_close_socket.c
+    network/_open_udp_socket.c
 )
 
 target_include_directories(network
