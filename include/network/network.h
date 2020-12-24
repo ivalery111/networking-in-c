@@ -7,6 +7,7 @@
 enum {
   NET_OK = 0,
   NET_ERR_BIND = -1,
+  NET_ERR_INVALID = -2,
 };
 
 void stub();
