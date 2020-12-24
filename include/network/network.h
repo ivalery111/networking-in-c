@@ -1,5 +1,5 @@
-#ifndef INCLUDE_NETWORK_H
-#define INCLUDE_NETWORK_H
+#ifndef NETWORK_NETWORK_H
+#define NETWORK_NETWORK_H
 
 void stub();
 
