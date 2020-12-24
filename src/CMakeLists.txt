@@ -5,6 +5,7 @@ target_sources(network
     PRIVATE 
     network/_close_socket.c
     network/_open_udp_socket.c
+    network/_bind_socket.c
 )
 
 target_include_directories(network
