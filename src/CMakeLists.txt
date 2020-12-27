@@ -1,9 +1,13 @@
 add_library(network)
 add_library(network::network ALIAS network)
 
-file(GLOB SOURCES network/*.c)
 target_sources(network
-    PRIVATE ${SOURCES}
+    PRIVATE 
+    network/_close_socket.c
+    network/_open_udp_socket.c
+    network/_bind_socket.c
+    network/_read_buffer_udp.c
+    network/_send_buffer_udp.c
 )
 
 target_include_directories(network
