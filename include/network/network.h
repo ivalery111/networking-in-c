@@ -45,6 +45,8 @@ net_server_cont_t *net_init_server_context(IN const char *,
                                            IN       server_msg_handler);
 net_client_cont_t *net_init_client_context(IN const char *, IN const uint16_t);
 
+int net_release_server_context(net_server_cont_t *);
+
 int net_start_udp_server(net_server_cont_t *);
 int net_stop_udp_server(net_server_cont_t *);
 
