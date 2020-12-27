@@ -28,7 +28,7 @@ function(set_project_warnings project_name)
       -Wall
       -Wextra
       -Wshadow
-      -Wcast-align
+      # -Wcast-align
       -Wunused
       -Wpedantic
       -Wconversion
