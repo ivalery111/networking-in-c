@@ -27,4 +27,6 @@ int _net_stop_udp_server(net_server_cont_t *);
 
 int _net_release_server_context(net_server_cont_t *);
 
+int _net_release_client_context(net_client_cont_t *);
+
 #endif
