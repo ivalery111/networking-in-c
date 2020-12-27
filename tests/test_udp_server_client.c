@@ -66,6 +66,7 @@ static void *run_client(void *arg) {
 
   /* Is ping succeess ? */
   size_t number = *((size_t *)response);
+  (void)number;
   assert(number == NET_RES_OK);
 
   /* TODO(valery): Implement safe free function */
