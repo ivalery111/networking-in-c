@@ -44,6 +44,9 @@ static void *run_server(void *arg) {
       net_init_server_context("localhost", 6677, msg_handler);
 
   net_start_udp_server(server);
+
+  net_release_server_context(server);
+
   return NULL;
 }
 
@@ -65,6 +68,10 @@ static void *run_client(void *arg) {
   size_t number = *((size_t *)response);
   assert(number == NET_RES_OK);
 
+  /* TODO(valery): Implement safe free function */
+  free(response);
+  response = NULL;
+
   /* Send stop the server request */
   net_send_data_udp(client,
                     (const char *)&(size_t){NET_REQ_STOP},
@@ -75,8 +82,14 @@ static void *run_client(void *arg) {
   number = *((size_t *)response);
   assert(number == NET_RES_OK);
 
+  /* TODO(valery): Implement safe free function */
+  free(response);
+  response = NULL;
+
   /* Server was stopped so the client exiting */
   is_client_finished = true;
+
+  net_release_client_context(client);
 
   return NULL;
 }
