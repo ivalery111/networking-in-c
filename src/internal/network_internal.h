@@ -1,6 +1,7 @@
 #ifndef NETWORK_NETWORK_INTERNAL_H
 #define NETWORK_NETWORK_INTERNAL_H
 
+#include <arpa/inet.h>
 #include <netinet/in.h>
 #include <stdint.h>
 #include <string.h>
@@ -21,5 +22,7 @@ ssize_t _net_send_buffer_udp(IN int          receiver,
                              IN const size_t buffer_size);
 
 int _net_close_socket(const int sock);
+
+int _net_stop_udp_server(net_server_cont_t *);
 
 #endif
